@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Soup Cart brings you comforting, freshly crafted soups. From creamy classics to bold flavors, experience premium soup from our mobile kitchen.">
+    <meta name="keywords"
+        content="Soup, Food Cart, Fresh Soups, Gourmet Soups, Street Food, Chennai Soup Cart, Premium Soup India">
+    <meta name="author" content="Soup Cart Team">
+    <!-- Open Graph Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Soup Cart | Fresh, Premium Soups on the Go">
+<meta property="og:description" content="Comforting, flavorful, hand-crafted soups served fresh. Taste luxury from our cart.">
+<meta property="og:url" content="https://yourwebsite.com/">
+<meta property="og:image" content="https://yourwebsite.com/images/og-image.jpg"> <!-- 1200x630px -->
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Soup Cart | Fresh, Premium Soups on the Go">
+<meta name="twitter:description" content="Comforting, flavorful, hand-crafted soups served fresh. Taste luxury from our cart.">
+<meta name="twitter:image" content="https://yourwebsite.com/images/og-image.jpg">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Soup Cart",
+  "image": "https://yourwebsite.com/images/soupbowl.png",
+  "description": "Fresh, comforting soups crafted with local ingredients and bold flavors.",
+  "url": "https://yourwebsite.com",
+  "servesCuisine": "Soup",
+  "telephone": "+91-XXXX-XXXXXX",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[Your Market Name or Street]",
+    "addressLocality": "[City]",
+    "addressRegion": "[State]",
+    "postalCode": "[PIN]",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo-Su 12:00-22:00"
+}
+</script>
+
+
+    <title>Soup Cart | Fresh, Premium Soups on the Go</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --warm-cream: #F5EFE6;
+            --olive-green: #6B705C;
+            --terracotta: #B5654A;
+            --dark-charcoal: #2E2E2E;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--warm-cream);
+            color: var(--dark-charcoal);
+            line-height: 1.6;
+
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--olive-green);
+            font-size: clamp(2rem, 4vw, 3rem);
+            /* 32px → 48px for responsiveness */
+            font-weight: 600;
+            /* Semi-bold, usually good for headings */
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            /* optional for spacing consistency */
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-charcoal);
+            font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+            /* ≈21px → 24px for responsiveness */
+            font-weight: 600;
+            /* semi-bold for better emphasis */
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+            /* optional for spacing between elements */
+        }
+
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 8rem);
+            /* Roughly goes up to ~128px (8rem = 128px) */
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            /* Semi-bold */
+            color: var(--dark-charcoal);
+            line-height: 1.1;
+        }
+
+        p {
+            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+            /* Responsive: 18px → 24px */
+            line-height: 1.6;
+            font-weight: 400;
+            color: var(--dark-charcoal);
+        }
+
+
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            flex: 1;
+
+
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-charcoal);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--terracotta);
+        }
+
+        .cta-button {
+            background-color: var(--terracotta);
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #944432;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap-reverse;
+            gap: 2rem;
+            padding: 6rem 2rem 4rem;
+            background: url('heroback.png') center/cover no-repeat;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 500px;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 12px;
+        }
+
+        section {
+            padding: 3rem 1.5rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .menu-item {
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .menu-item h3 {
+            margin-top: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .price {
+            color: var(--terracotta);
+            font-weight: 600;
+            margin-top: 0.4rem;
+            font-size: 0.95rem;
+        }
+
+        .split-section {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .split-section img {
+            max-width: 350px;
+            border-radius: 10px;
+        }
+
+        .split-section .text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .why-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+
+        .why-list li {
+            margin-bottom: 0.75rem;
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            /* Responsive: min ~19px → ideal ~24px → max 24px */
+            position: relative;
+            padding-left: 2rem;
+            line-height: 1.4;
+        }
+
+
+
+        .why-list li::before {
+            content: '✓';
+            color: var(--olive-green);
+            position: absolute;
+            left: 0;
+            font-size: 1.3rem;
+            /* match icon size with text */
+            top: 0.15rem;
+            /* vertical align adjustment */
+        }
+
+
+        .find-us-container {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .map-img {
+            max-width: 450px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .find-us-details {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .find-us-details p {
+            margin-bottom: 0.8rem;
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            /* ~19px → responsive → 24px max */
+            line-height: 1.5;
+        }
+
+
+        .reviews {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .review-card {
+            border: 1px solid #6B705C;
+            padding: 1.25rem;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .review-card span {
+            color: var(--terracotta);
+            display: block;
+            margin-top: 0.75rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background-color: var(--olive-green);
+            color: var(--warm-cream);
+            padding: 2.5rem 2rem;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-left {
+            max-width: 400px;
+        }
+
+        .footer-left h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-left p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+
+        .footer-links a {
+            color: var(--warm-cream);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--terracotta);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: var(--warm-cream);
+            z-index: 999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        nav.navbar {
+            border-bottom: 1px solid #2E2E2E;
+        }
+
+
+        .navbar .logo {
+            flex: 1;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--dark-charcoal);
+            margin-left: auto;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: var(--warm-cream);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem 2rem;
+                width: 200px;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+                box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.show {
+                transform: translateX(0);
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+
+        /* Responsive layout for smaller screens */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 1rem;
+            }
+
+            .split-section {
+                flex-direction: column;
+            }
+
+            .find-us-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                padding: 3rem 1rem;
+                text-align: center;
+            }
+
+            .hero-text {
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .hero-image img {
+                max-width: 90%;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Soup Cart</div>
+
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#find-us">Visit Us</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+
+    <header class="hero" id="home">
+        <div class="hero-text">
+            <h1>Soup,<br>Elevated.</h1>
+            <p>Fresh, Comforting, Crafted for those who love fine flavours.</p>
+            <a href="#menu"><button class="cta-button">See Menu</button></a>
+        </div>
+        <div class="hero-image">
+            <img src="soupbowl.png" alt="Soup Bowl" loading="lazy">
+        </div>
+    </header>
+
+    <section class="split-section">
+        <div class="text">
+            <h2>About Us</h2>
+            <p>At Soup Elevated, we believe that soup isn’t just a meal — it’s an experience. Every bowl we serve is a
+                blend of fresh, handpicked ingredients, simmered slowly to unlock layers of rich, aromatic flavor. From
+                creamy classics to bold, spicy innovations, our soups are crafted with love and care. Whether you're
+                seeking a warm, nourishing lunch or a cozy evening treat, we promise comfort with a touch of culinary
+                elegance. Here, every sip tells a story.</p>
+        </div>
+        <img src="chef.png" alt="About Us Image" loading="lazy">
+    </section>
+
+    <section id="menu">
+        <h2>Menu Highlights</h2>
+        <div class="menu-items">
+            <div class="menu-item"><img src="1.png" alt="Herbed Tomato & Basil" loading="lazy">
+                <h3>Herbed Tomato & Basil</h3>
+                <p class="price">Rs. 499</p>
+            </div>
+            <div class="menu-item"><img src="2.png" alt="Creamy Mushroom Delight" loading="lazy">
+                <h3>Creamy Mushroom Delight</h3>
+                <p class="price">Rs. 499</p>
+            </div>
+            <div class="menu-item"><img src="3.png" alt="Classic Veg Broth" loading="lazy">
+                <h3>Classic Veg Broth</h3>
+                <p class="price">Rs. 499</p>
+            </div>
+            <div class="menu-item"><img src="4.png" alt="Signature Spicy Lentil" loading="lazy">
+                <h3>Signature Spicy Lentil</h3>
+                <p class="price">Rs. 499</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="split-section">
+        <div class="text">
+            <h2>Why Choose Us</h2>
+            <ul class="why-list">
+                <li>Fresh, local ingredients</li>
+                <li>Slow-cooked for real flavour</li>
+                <li>Premium presentation — even from a cart</li>
+                <li>Sustainable packaging</li>
+            </ul>
+        </div>
+        <img src="veg.png" alt="Why Choose Us Image" loading="lazy">
+    </section>
+
+    <section id="find-us">
+        <h2>Where to Find Us</h2>
+        <div class="find-us-container">
+            <img src="map.png" alt="Map Location" class="map-img" loading="lazy">
+            <div class="find-us-details">
+                <p><strong>Location:</strong> [Your Market Name / Street Name]</p>
+                <p><strong>Open:</strong> 12 PM – 10 PM</p>
+                <p><strong>Follow us:</strong> @YourHandle</p>
+                <button class="cta-button">Get Directions</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <h2>Reviews</h2>
+        <div class="reviews">
+            <div class="review-card">
+                ⭐⭐⭐⭐⭐
+                <p>“Finally, a food cart that understands flavors. The Creamy Mushroom Delight is my go-to every
+                    evening!”</p>
+                <span>— Riya S., Food Blogger</span>
+            </div>
+            <div class="review-card">
+                ⭐⭐⭐⭐⭐
+                <p>“Best soup I've ever had from a food cart. Elegant, rich, and comforting.”</p>
+                <span>— Arjun K., Student</span>
+            </div>
+            <div class="review-card">
+                ⭐⭐⭐⭐⭐
+                <p>“I didn’t expect a soup cart to taste this premium. Blown away!”</p>
+                <span>— Priya N., Marketing</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@soupcart.com</p>
+        <p>Phone: +91-XXXX-XXXXXX</p>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Soup Cart</h3>
+                <p>“Good food. Great soup.”</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#find-us">Visit Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 Soup Cart. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+</script>
+
+
+</html>
